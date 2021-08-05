@@ -1,0 +1,160 @@
+<!--<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="400" height="300" style="border:5px solid red;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+</body>
+</html>-->
+
+<!--The HTML <canvas> element is used to draw graphics-->
+	<!-- ID reffered in javascript-->
+	<!--width and  height- size of the canvas--->
+
+	
+<!--<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "blue";
+ctx.fillRect(15,20,170,75);
+</script>
+
+</body>
+</html>-->
+
+<!-- The getContext() function is the function that you use to get access to the canvas tags 2D drawing functions.-->
+<!-- fillstyle -property-->
+<!--The fillRect() method draws a filled rectangle whose starting point is at (x, y) and whose size is specified by width and height-->
+
+<!--
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(170,70);
+ctx.stroke();
+</script>
+
+</body>
+</html>
+-->
+<!--The stroke() method draws the path you have defined with all those moveTo() and lineTo(x,y) methods-->
+<!-- Line Postition-->
+
+<!--
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid green;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(50,75,30,0,2*Math.PI);
+ctx.stroke();
+</script>
+</body>
+</html>-->
+
+<!--The beginPath() method begins a path-->
+<!--The arc() method creates an arc/curve used to create circles, or parts of circles.-->
+<!--stroke() method to draw the path on the canvas-->
+
+<!--
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="600" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.fillText("Chain Sys",15,50);
+</script>
+
+</body>
+</html>
+-->
+
+
+<!--	<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+// Create gradient
+var grd = ctx.createLinearGradient(0,0,150,0);
+grd.addColorStop(0,"green");
+grd.addColorStop(1,"white");
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10,10,150,80);
+</script>
+
+</body>
+</html>
+-->
+<!--The x-coordinate of the start point of the gradient-->
+<!--The y-coordinate of the start point of the gradient-->
+<!--The x-coordinate of the end point of the gradient-->
+<!--The y-coordinate of the end point of the gradient-->
+<!--fillRect() method draws a "filled" rectangle-->
+<!-- fillrect() - x coordinate, y coordinate, width, height-->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Image to use:</p>
+<img id="tech" src="tech.jpg" alt="The tech" width="200" height="250">
+
+<p>Canvas to fill:</p>
+<canvas id="myCanvas" width="250" height="300"
+style="border:1px solid green;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<p><button onclick="myCanvas()">Click</button></p>
+
+<script>
+function myCanvas() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("tech");
+    ctx.drawImage(img,0,0);
+}
+</script>
+
+</body>
+</html>
